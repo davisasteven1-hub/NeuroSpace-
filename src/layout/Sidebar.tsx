@@ -1,6 +1,6 @@
 import {
   LayoutDashboard, CalendarDays, ClipboardList, BookOpen, FileText,
-  FolderKanban, GraduationCap, Bot, Settings, Camera, User, X,
+  FolderKanban, GraduationCap, Bot, Settings, Camera, User, X, Target,
 } from 'lucide-react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
@@ -13,6 +13,7 @@ const links = [
   { name: 'Notes', icon: FileText, path: '/notes' },
   { name: 'Projects', icon: FolderKanban, path: '/projects' },
   { name: 'GPA', icon: GraduationCap, path: '/gpa' },
+  { name: 'Financial Goals', icon: Target, path: '/financial-goals' },
   { name: 'AI', icon: Bot, path: '/ai' },
   { name: 'Settings', icon: Settings, path: '/settings' },
 ];

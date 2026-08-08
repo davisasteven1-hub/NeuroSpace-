@@ -21,6 +21,7 @@ import GPA from "./pages/GPA";
 import SettingsPage from './pages/Settings';
 import Projects from './pages/Projects';
 import AIAssistant from './pages/AIAssistant';
+import FinancialGoals from "./pages/FinancialGoals";
 import AdminLogin from './pages/admin/AdminLogin';
 import AdminDashboard from './pages/admin/AdminDashboard';
 import AdminUserDetailPage from './pages/admin/AdminUserDetail';
@@ -74,6 +75,7 @@ function ApplicationRoutes() {
               <Route path="/projects" element={<Projects />} />
               <Route path="/gpa" element={<GPA />} />
               <Route path="/GPA" element={<Navigate to="/gpa" replace />} />
+              <Route path="/financial-goals" element={<FinancialGoals />} />
               <Route path="/ai" element={<AIAssistant />} />
               <Route path="/settings" element={<SettingsPage />} />
               <Route path="*" element={<Navigate to="/dashboard" replace />} />

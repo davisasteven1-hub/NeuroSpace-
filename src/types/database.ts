@@ -261,6 +261,24 @@ export interface Database {
         Update: { id?: string; user_id?: string; note_file_id?: string; content?: string; created_at?: string; updated_at?: string; };
         Relationships: [];
       };
+      financial_goal_groups: {
+        Row: { id: string; user_id: string; title: string; description: string | null; color: string | null; sort_order: number; created_at: string; updated_at: string; };
+        Insert: { id?: string; user_id: string; title: string; description?: string | null; color?: string | null; sort_order?: number; created_at?: string; updated_at?: string; };
+        Update: { id?: string; user_id?: string; title?: string; description?: string | null; color?: string | null; sort_order?: number; created_at?: string; updated_at?: string; };
+        Relationships: [];
+      };
+      financial_goals: {
+        Row: { id: string; user_id: string; group_id: string; title: string; target_amount: number; target_percentage: number; is_completed: boolean; completed_at: string | null; notes: string | null; sort_order: number; created_at: string; updated_at: string; };
+        Insert: { id?: string; user_id: string; group_id: string; title: string; target_amount: number; target_percentage: number; is_completed?: boolean; completed_at?: string | null; notes?: string | null; sort_order?: number; created_at?: string; updated_at?: string; };
+        Update: { id?: string; user_id?: string; group_id?: string; title?: string; target_amount?: number; target_percentage?: number; is_completed?: boolean; completed_at?: string | null; notes?: string | null; sort_order?: number; created_at?: string; updated_at?: string; };
+        Relationships: [];
+      };
+      financial_goal_settings: {
+        Row: { user_id: string; current_balance: number; target_balance: number; created_at: string; updated_at: string; };
+        Insert: { user_id: string; current_balance?: number; target_balance?: number; created_at?: string; updated_at?: string; };
+        Update: { user_id?: string; current_balance?: number; target_balance?: number; created_at?: string; updated_at?: string; };
+        Relationships: [];
+      };
     };
     Views: Record<string, never>;
     Functions: Record<string, never>;
